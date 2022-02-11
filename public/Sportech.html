@@ -2,14 +2,86 @@
 <html>
 
 <head>
-    <title> Sportech </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #1dc98a;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.6;
+
+        }
+
+        .myimg {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 70%;
+        }
+
+        .bg-image {
+            background-image: url("background.png");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .my-text {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(88, 88, 88, 0.5);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            border: 5px white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            width: 40%;
+            padding: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
-        <li><a href="college.html"> College </a></li>
-        <li><a href="stusignin.html"> Student </a></li>
-    </ul>
+
+    <div class="bg-image"></div>
+
+    <div class="my-text">
+        <table cellspacing="15">
+            <tr>
+                <td><img src="SportexLogo.png" class="myimg" />
+                <td>
+                    <h1>SPORTECH:<br> Sports Logistic Management App</h1>
+                </td>
+            </tr>
+        </table>
+
+        <button class="button button1" onclick="window.location.href ='college.html'">College</button>
+        </br>
+        <button class="button button1" onclick="window.location.href ='stulogin.html'">Student</button>
+    </div>
 
 </body>
 

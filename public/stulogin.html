@@ -2,46 +2,147 @@
 <html>
 
 <head>
-    <title> SignUp </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text],
+        input[type=password] {
+            font-size: 16px;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #1dc98a;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.6;
+        }
+
+        .bg-image {
+            background-image: url("stuLogin.jpeg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .signinbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: rgb(61, 108, 179);
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+        }
+
+        .my-text {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(88, 88, 88, 0.5);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            border: 5px white;
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            width: 30%;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .myimg {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(88, 88, 88, 0.5);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            position: absolute;
+            top: 4%;
+            left: 70%;
+            transform: translate(-70%, -50%);
+            z-index: 5;
+            width: 100%;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-color: lightgoldenrodyellow;
-    }
-
-    table {
-        color: white;
-        background-color: black;
-        border-radius: 25px;
-    }
-
-    #button {
-        background-color: lightgrey;
-        color: black;
-        height: 40px;
-        width: 80px;
-        border-radius: 25px;
-    }
-</style>
 
 <body>
 
-    <h2>
-        <center>Login!</center>
-    </h2>
-    <table align="center" cellspacing="15">
-        <tr>
-            <td><input type="text" placeholder="Email or Roll Number"> </td>
-        </tr>
-        <tr>
-            <td><input type="text" placeholder="Password"> </td>
-        </tr>
+    <div class="bg-image"></div>
+    <div class="navbar">
+        <table>
+            <tr>
+                <td><img src="SportexLogo.png" class="myimg" />
+                <td>
+                    <a class="active" href="Sportech.html"> Sportech</a>
+                </td>
+            </tr>
+        </table>
 
-        <tr>
-            <td align="center" colspan="2"> <input type="Submit" id="button"></td>
-        </tr>
+    </div>
 
-    </table>
+    <div class="my-text">
+        <h2>Student Login </h2>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit">Login</button>
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+        <span class="psw">Forgot <a href="#">Password?</a></span>
+        </br></br>
+        <label>No Account?</label><a class="active" href="stusignin.html"> Create One!</a>
+
+    </div>
+
 
 
 </body>

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
-import { getAuth, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyCiOpgUYVJDSdJYn9hWvkUwN75fBZenheM",
     authDomain: "sportech-b3840.firebaseapp.com",
@@ -14,21 +14,32 @@ document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
     console.log(app);
 })
-document.emailLogin=function emailLogin(emailName)
+document.emailsignup=function emailsignup(emailName, pwd)
 {
-    console.log("! "+emailName.value);
-    const ActionCodeSettings={
-        url: "https://sportech-b3840.web.app/",
-        handleCodeInApp: true
-    }
     const auth = getAuth();
-    sendSignInLinkToEmail(auth, emailName, ActionCodeSettings)
+    createUserWithEmailAndPassword(auth, emailName.value, pwd.value)
         .then((userCredential) => {
             // Signed in
-            window.localStorage.setItem('emailForSignIn',emailName.value);
             const user = userCredential.user;
-            document.write("Hello "+user.displayName);
-            console.log("Hello "+user.displayName);
+            console.log(user);
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+            // ..
+        });
+}
+document.emailsignin=function emailsignin(emailName, pwd)
+{
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, emailName.value, pwd.value)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
             // ...
         })
         .catch((error) => {

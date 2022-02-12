@@ -31,7 +31,10 @@
     <h2>Student Login </h2>
     <label for="emailid"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="emailid" id="emailid" required>
-    <button type="submit" onclick = "emailLogin(document.getElementById('emailid'))">Login with email</button>
+    <label for="pwd"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="pwd" id="pwd" required>
+    <button type="submit" onclick = "emailsignup(document.getElementById('emailid'),document.getElementById('pwd'))">Sign up with email</button>
+    <button type="submit" onclick = "emailsignin(document.getElementById('emailid'),document.getElementById('pwd'))">Sign in with email</button>
     <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
     <span class="psw">Forgot <a href="#">Password?</a></span>
     </br></br>

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
     console.log(app);
 })
-document.emailsignup=function emailsignup(emailName, pwd)
+document.emailsignup=function emailsignup(emailName, pwd, admin)
 {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, emailName.value, pwd.value)
@@ -32,7 +32,7 @@ document.emailsignup=function emailsignup(emailName, pwd)
             // ..
         });
 }
-document.emailsignin=function emailsignin(emailName, pwd)
+document.emailsignin=function emailsignin(emailName, pwd, admin)
 {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, emailName.value, pwd.value)
@@ -40,6 +40,7 @@ document.emailsignin=function emailsignin(emailName, pwd)
             // Signed in
             const user = userCredential.user;
             console.log(user);
+            window.location.href = "tea_flower/index.html";
             // ...
         })
         .catch((error) => {
@@ -49,4 +50,8 @@ document.emailsignin=function emailsignin(emailName, pwd)
             console.log(errorMessage);
             // ..
         });
+}
+document.additem=function additem(quantities)
+{
+
 }

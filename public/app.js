@@ -1,4 +1,4 @@
-import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
+import { getAuth, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
     console.log(app);

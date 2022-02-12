@@ -1,13 +1,21 @@
+import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
     console.log(app);
 })
-function emailLogin()
+function emailLogin(emailName)
 {
-    const auth = firebase.auth.getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
+    console.log("! "+emailName);
+    ActionCodeSettings={
+        url: "https://sportech-b3840.web.app/",
+        handleCodeInApp: true
+    }
+    const auth = getAuth();
+    console.log("!");
+    sendSignInLinkToEmail(auth, emailName, ActionCodeSettings)
         .then((userCredential) => {
-            // Signed in 
+            // Signed in
+            window.localStorage.setItem('emailForSignIn',email);
             const user = userCredential.user;
             document.write("Hello "+user.displayName);
             console.log("Hello "+user.displayName);

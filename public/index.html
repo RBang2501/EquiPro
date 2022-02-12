@@ -22,9 +22,21 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script type="text/javascript" src="app.js"></script>
 
   </head>
   <body>
-    <script type="module" src="app.js"></script>
+
+    <div class="my-text">
+    <h2>Student Login </h2>
+    <label for="emailid"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="emailid" id="emailid" required>
+    <button type="submit" onclick = "emailLogin(document.getElementById('emailid'))">Login with email</button>
+    <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    <span class="psw">Forgot <a href="#">Password?</a></span>
+    </br></br>
+    <label>No Account?</label><a class="active" href="stusignin.html"> Create One!</a>
+    </div>
+    
   </body>
 </html>

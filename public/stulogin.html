@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script type="module" src="app.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body,
@@ -131,16 +133,16 @@
     <div class="my-text">
         <h2>Student Login </h2>
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
+        <input type="text" placeholder="Enter Username" name="emailid" id="emailid" required>
+    
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <button type="submit">Login</button>
+        <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
+        <button type="submit"
+            onclick="emailsignin(document.getElementById('emailid'),document.getElementById('pwd'),true)">Login</button>
         <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
         <span class="psw">Forgot <a href="#">Password?</a></span>
         </br></br>
         <label>No Account?</label><a class="active" href="stusignin.html"> Create One!</a>
-
     </div>
 
 

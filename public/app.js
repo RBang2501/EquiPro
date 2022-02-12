@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
 const firebaseConfig = {
     apiKey: "AIzaSyCiOpgUYVJDSdJYn9hWvkUwN75fBZenheM",
     authDomain: "sportech-b3840.firebaseapp.com",
@@ -12,7 +13,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
-    console.log(app);
 })
 document.emailsignup=function emailsignup(emailName, pwd)
 {
@@ -21,7 +21,7 @@ document.emailsignup=function emailsignup(emailName, pwd)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
+            window.location.href = "tea_flower/index.html";
             // ...
         })
         .catch((error) => {
@@ -39,7 +39,6 @@ document.emailsignin=function emailsignin(emailName, pwd)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
             window.location.href = "tea_flower/index.html";
             // ...
         })

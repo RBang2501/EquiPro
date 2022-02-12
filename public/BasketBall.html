@@ -19,56 +19,84 @@
 
     <div class="row">
 
-        <div class="col-12">
-            <div style="text-align: center; width:100%;border-style:solid; border-radius:10px;border-color:#0000ff">
-                <center>
-                    <h1 style="color: white;">Click the buttons to check equipment availability</h1>
-                </center>
-                <div class="btn-group" style="width:100%; padding-bottom: 2%;">
-                    <button style="width:100%" onclick="myFunction()">Basketball
-                        <span class="popuptext" id="myPopup">Number of Basketball Available: 69<span>
-                    </button>
+        <div class="col-12" style="display: flex; justify-content: center;">
+        
+                <div style="width:50%; padding-bottom: 2%;">
+                    <a aria-label='Thanks' class='h-button left_centered' data-text='Basketball' href='#'>
+                        <span>Available: #num </span>
+                    </a>
                 </div>
-                <div class="btn-group" style="width:100%; padding-bottom: 2%">
-                    <button style="width:100%" onclick="myFunction1()">Pump
-                        <span class="popuptext" id="myPopup1">Number of Pump Available: 69<span>
-                    </button>
+                <div style="width:50%; padding-bottom: 2%">
+                    <a aria-label='Thanks' class='h-button centered' data-text='Net' href='#'>
+                        <span>Available: #num </span>
+                    </a>
                 </div>
-                <div class="btn-group" style="width:100%; padding-bottom: 2%">
-                    <button style="width:100%" onclick="myFunction2()">Net
-                        <span class="popuptext" id="myPopup2">Number of Net Available: 69<span>
-                    </button>
+                <div style="width:50%; padding-bottom: 2%">
+                    <a aria-label='Thanks' class='h-button right_centered' data-text='Pump' href='#'>
+                        <span>Available: #num </span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="col-12">
-            <div style="padding-left:2%;width:100%;border-style:solid; border-radius:10px;border-color:#0000ff">
+        <div class="col-12" style="display: flex; justify-content: center; padding-top: 20% ;">
+            <div style="padding-left:2%;width:50%;border-style:solid; border-radius:10px;border-color:#0000ff">
                 <center>
                     <h1 style="color: white;">Issue Equipment</h1>
                 </center>
                 <form>
-                    <p style="color: aliceblue; margin-left: 8%; font-size: 30px; display: inline-block; color: cyan;">Equipment:</p>
-                    <p style="color: aliceblue; margin-left: 48%; font-size: 30px; display: inline-block; color: cyan;">Quantity:</p><br>
-                    <label class="container" style="color: aliceblue; display: inline-block;margin-left: 10%;">Basketball
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                    <label for="quantity" style="color: aliceblue; display: inline-block; padding-left: 50%;">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="0" max="1"><br>
+                    <div class="wrapper">
 
-                    <label class="container" style="color: aliceblue; display: inline-block;margin-left: 10%;">Net
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                    <label for="quantity" style="color: aliceblue; display: inline-block; padding-left: 53.9%;">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="0" max="1"><br>
+                        <div class="equipment">
+                            <p style="color: aliceblue; font-size: 30px; display: inline-block; color: cyan;">
+                                Equipment:</p>
 
-                    <label class="container" style="color: aliceblue; display: inline-block;margin-left: 10%;">Pump
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                    <label for="quantity" style="color: aliceblue; display: inline-block; margin-left: 52.6%;">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="0" max="1"><br>
+                            <label class="container" style="color: aliceblue;">Pump
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" style="color: aliceblue; ">Basketball
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" style="color: aliceblue; ">Net
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </div>
+                        <div class="equipment">
+                            <p style="color: aliceblue; font-size: 30px; color: cyan;">
+                                Quantity:</p>
+                            
+                                <div class="dropbox">
+                                    
+                                    <label for="quantity"
+                                        style="color: aliceblue;">Quantity:</label>
+                                    <input type="number" id="quantity" name="quantity" min="0" max="1">
+                                </div>
+                                <div class="dropbox">
+                                    
+                                    <label for="quantity"
+                                        style="color: aliceblue;">Quantity:</label>
+                                    <input type="number" id="quantity" name="quantity" min="0" max="1">
+                                </div>
+                                <div class="dropbox">
+                                    
+                                    <label for="quantity"
+                                        style="color: aliceblue;">Quantity:</label>
+                                    <input type="number" id="quantity" name="quantity" min="0" max="1">
+                                </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
                     <div class="submit">
                         <input type="submit" value="Issue">
                     </div>
@@ -98,7 +126,8 @@
 </script>
 <style>
     body {
-        background-image: url('Img/Basketball.jpeg');
+        background-color: black;
+        background-image: url('../public/Img/basketball.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;

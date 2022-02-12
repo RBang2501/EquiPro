@@ -1,18 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
 const firebaseConfig = {
-    apiKey: "AIzaSyCiOpgUYVJDSdJYn9hWvkUwN75fBZenheM",
-    authDomain: "sportech-b3840.firebaseapp.com",
-    projectId: "sportech-b3840",
-    storageBucket: "sportech-b3840.appspot.com",
-    ssagingSenderId: "719432324696",
-    appId: "1:719432324696:web:a77c03a73b1fd24e0f1c2d",
-    measurementId: "G-02DKHENZ02"
+    apiKey: "AIzaSyDSmTlPi8InpwSpuhf5l4hGY6a79nfwkMs",
+    authDomain: "sportech-5fdc4.firebaseapp.com",
+    projectId: "sportech-5fdc4",
+    storageBucket: "sportech-5fdc4.appspot.com",
+    messagingSenderId: "829294555954",
+    appId: "1:829294555954:web:cc1c16a2d4668735cddd2b",
+    measurementId: "G-0W1XGNDPN2"
 };
 const app = initializeApp(firebaseConfig);
 document.addEventListener("DOMContentLoaded",event => {
     const app = firebase.app();
-    console.log(app);
 })
 document.emailsignup=function emailsignup(emailName, pwd, admin)
 {
@@ -21,7 +21,7 @@ document.emailsignup=function emailsignup(emailName, pwd, admin)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
+            window.location.href = "tea_flower/index.html";
             // ...
         })
         .catch((error) => {
@@ -39,7 +39,6 @@ document.emailsignin=function emailsignin(emailName, pwd, admin)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
             window.location.href = "tea_flower/index.html";
             // ...
         })

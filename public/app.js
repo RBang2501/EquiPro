@@ -40,6 +40,7 @@ document.emailsignin=function emailsignin(emailName, pwd)
             // Signed in
             const user = userCredential.user;
             console.log(user);
+            window.location.href = "tea_flower/index.html";
             // ...
         })
         .catch((error) => {

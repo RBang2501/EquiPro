@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/Basketball.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Football.css">
     <script>
     </script>
 
@@ -27,13 +27,8 @@
 
         <div class="col-12" style="display: flex; justify-content: center;">
             <div style="width:50%; padding-bottom: 2%;">
-                <a aria-label='Thanks' class='h-button left_centered' data-text='Basketball' href='#' style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">
-                    <span>Available: 4 </span>
-                </a>
-            </div>
-            <div style="width:50%; padding-bottom: 2%">
-                <a aria-label='Thanks' class='h-button centered' data-text='Basketball Net' href='#' style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-style: italic;">
-                    <span>Available: 3 </span>
+                <a aria-label='Thanks' class='h-button centered' data-text='Football' href='#' style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">
+                    <span>Available: 8 </span>
                 </a>
             </div>
             <div style="width:50%; padding-bottom: 2%">
@@ -59,12 +54,7 @@
                         <p style="color: aliceblue; font-size: 30px; display: inline-block; color: cyan; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">
                             Equipment:</p>
 
-                        <label class="container" style="color: aliceblue;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">Basketball
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-
-                        <label class="container" style="color: aliceblue; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">Basketball Net
+                        <label class="container" style="color: aliceblue;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">Football 
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
@@ -73,6 +63,7 @@
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
+
 
                     </div>
                     <div class="equipment">
@@ -89,17 +80,13 @@
                             <label for="quantity" style="color: aliceblue;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="0" max="99">
                         </div>
-                        <div class="dropbox">
 
-                            <label for="quantity" style="color: aliceblue;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: italic;">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" min="0" max="99">
-                        </div>
 
                     </div>
 
                 </div>
 
-
+                
 
 
 
@@ -128,6 +115,20 @@
     function myFunction2() {
         var popup = document.getElementById("myPopup2");
         popup.classList.toggle("show");
+    }
+
+    function display_array() {
+        var arr = Array();
+        arr[0] = "Rakshit";
+        arr[1] = "Netra";
+        arr[2] = "Rahul";
+        arr[3] = "Arya";
+        var e = "<hr/>";
+
+        for (var y = 0; y < array.length; y++) {
+            e += array[y] + ", ";
+        }
+        document.getElementById("Result").innerHTML = e;
     }
 </script>
 

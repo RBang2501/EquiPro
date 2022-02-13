@@ -11,15 +11,16 @@ const firebaseConfig = {
     measurementId: "G-0W1XGNDPN2"
 };
 const app = initializeApp(firebaseConfig);
-document.addEventListener("DOMContentLoaded",event => {
+document.addEventListener("DOMContentLoaded", event => {
     const app = firebase.app();
 })
-document.emailsignup=function emailsignup(emailName, pwd, admin)
-{
+document.emailsignup = function emailsignup(emailName, pwd) {
+    console.log("!");
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, emailName.value, pwd.value)
         .then((userCredential) => {
             // Signed in
+            console.log("!");
             const user = userCredential.user;
             window.location.href = "tea_flower/index.html";
             // ...
@@ -32,8 +33,7 @@ document.emailsignup=function emailsignup(emailName, pwd, admin)
             // ..
         });
 }
-document.emailsignin=function emailsignin(emailName, pwd, admin)
-{
+document.emailsignin = function emailsignin(emailName, pwd) {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, emailName.value, pwd.value)
         .then((userCredential) => {
@@ -50,7 +50,6 @@ document.emailsignin=function emailsignin(emailName, pwd, admin)
             // ..
         });
 }
-document.additem=function additem(quantities)
-{
+document.additem = function additem(quantities) {
 
 }

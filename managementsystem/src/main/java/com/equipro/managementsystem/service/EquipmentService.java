@@ -5,4 +5,5 @@ import com.equipro.managementsystem.model.Equipment;
 import java.util.List;
 
 public interface EquipmentService {
+    Equipment saveEquipment(Equipment equipment);
 }

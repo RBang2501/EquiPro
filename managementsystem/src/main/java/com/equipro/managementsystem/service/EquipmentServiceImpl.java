@@ -8,7 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
-public class EquipmentServiceImlpl implements EquipmentService {
+public class EquipmentServiceImpl implements EquipmentService {
     @Autowired
-    private EquipmentRepository studentRepository;
+    private EquipmentRepository equipmentRepository;
+
+    @Override
+    public Equipment saveEquipment(Equipment equipment) {
+        return equipmentRepository.save(equipment);
+    }
 }

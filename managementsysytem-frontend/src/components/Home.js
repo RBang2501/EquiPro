@@ -21,7 +21,7 @@ export default function Home() {
             <div className='four d-flex align-items-center'>
                 <div className="container my-5">
                     <div className='d-flex justify-content-center'>
-                        <Link to="/student">
+                        <Link to="/equipment">
                             <Card className='mx-2 my-2' sx={{ maxWidth: 345 }}>
                                 <CardActionArea>
                                     <CardMedia

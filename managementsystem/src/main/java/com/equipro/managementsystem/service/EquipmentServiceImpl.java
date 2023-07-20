@@ -16,4 +16,14 @@ public class EquipmentServiceImpl implements EquipmentService {
     public Equipment saveEquipment(Equipment equipment) {
         return equipmentRepository.save(equipment);
     }
+
+    @Override
+    public List<Equipment> getAllEquipments() {
+        return equipmentRepository.findAll();
+    }
+
+    @Override
+    public Equipment getEquipmentById(int id) {
+        return equipmentRepository.findById(id).orElse(null);
+    }
 }

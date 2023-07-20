@@ -119,7 +119,51 @@ export default function Student() {
 
   return( 
     <>
-      
+      <div className='bg-dark py-0 my-0'>
+      <Container className='mt-3 pt-3'>
+        <Paper elevation={3} style={paperStyle}>
+          <h3 className='fw-bold' style={{ color: 'black' }}>
+            <u>{currentStudentId ? 'Edit Equipment' : 'Add Equipment'}</u>
+          </h3>
+
+          <form noValidate autoComplete="off">
+            <TextField
+              className='my-2'
+              id="outlined-basic"
+              label="Equipment Name"
+              variant="outlined"
+              size="small"
+              fullWidth
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+              className='my-2'
+              id="outlined-basic"
+              label="Equipment Count"
+              variant="outlined"
+              size="small"
+              fullWidth
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <Button className='mt-2' variant="contained" color='primary' onClick={handleClick}>
+              {currentStudentId ? 'Update' : 'Submit'}
+            </Button>
+            {currentStudentId && (
+              <Button onClick={handleAddNew}>
+                Cancel
+              </Button>
+            )}
+          </form>
+        </Paper>
+
+
+        
+      </Container>
+
+
+    </div>
     </>
   );
 }

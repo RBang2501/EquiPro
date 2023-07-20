@@ -64,7 +64,7 @@ export default function Student() {
       .catch((error) => {
         console.error('Error updating student:', error);
       });
-    refreshPage();
+    // refreshPage();
   };
 
   const fetchAllStudents = () => {
@@ -76,6 +76,41 @@ export default function Student() {
       .catch((error) => {
         console.error('Error fetching students:', error);
       });
+  };
+
+  const handleEdit = (studentId) => {
+    const studentToEdit = students.find((student) => student.id === studentId);
+    if (studentToEdit) {
+      setName(studentToEdit.name);
+      setAddress(studentToEdit.address);
+      setCurrentStudentId(studentId);
+    }
+  };
+
+  const deleteStudent = (studentId) => {
+    fetch(`http://localhost:8080/student/delete/${studentId}`, {
+      method: 'DELETE',
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        fetchAllStudents(); // Fetch all students after deletion to refresh the list
+      })
+      .catch((error) => {
+        console.error('Error deleting student:', error);
+      });
+  };
+  const handleDelete = (studentId) => {
+    // if (window.confirm('Are you sure you want to delete this student?')) {
+    // }
+    deleteStudent(studentId);
+    refreshPage();
+  };
+
+  const handleAddNew = () => {
+    setName('');
+    setAddress('');
+    setCurrentStudentId(null);
   };
 
   useEffect(() => {

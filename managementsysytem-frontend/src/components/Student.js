@@ -159,7 +159,36 @@ export default function Student() {
         </Paper>
 
 
-        
+        <h3 className='text-center text-white fw-bold'>Equipments in Database</h3>
+        <Paper elevation={3} style={paperStyle}>
+          <TableContainer component={Paper}>
+            <Table aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>ID</TableCell>
+                  <TableCell align="center">Name</TableCell>
+                  <TableCell align="center">Count</TableCell>
+                  <TableCell align="center">Edit</TableCell>
+                  <TableCell align="center">Delete</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {students.map((student) => (
+                  <TableRow
+                    key={student.id}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">{student.id}</TableCell>
+                    <TableCell align="center">{student.name}</TableCell>
+                    <TableCell align="center">{student.address}</TableCell>
+                    <TableCell align="center"><Button variant="contained" onClick={() => handleEdit(student.id)}><EditIcon/></Button></TableCell>
+                    <TableCell align="center"><Button variant="contained"color="secondary"onClick={() => handleDelete(student.id)}><DeleteIcon/></Button></TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>;
       </Container>
 
 

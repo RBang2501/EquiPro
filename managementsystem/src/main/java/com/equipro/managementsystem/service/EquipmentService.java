@@ -8,4 +8,5 @@ public interface EquipmentService {
     Equipment saveEquipment(Equipment equipment);
     List<Equipment> getAllEquipments();
     Equipment getEquipmentById(int id);
+    void deleteEquipment(int id);
 }

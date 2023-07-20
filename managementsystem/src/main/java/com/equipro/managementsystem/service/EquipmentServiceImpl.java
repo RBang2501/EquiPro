@@ -26,4 +26,9 @@ public class EquipmentServiceImpl implements EquipmentService {
     public Equipment getEquipmentById(int id) {
         return equipmentRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void deleteEquipment(int id) {
+        equipmentRepository.deleteById(id);
+    }
 }
